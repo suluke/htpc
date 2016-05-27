@@ -90,7 +90,7 @@ Maybe they are already adapting to your setup and the changes between yours and 
 But if you run into any troubles, feel free to have a look at the config files in this repo.
 
 ### WIP
-* RetroArch performance should 
+* RetroArch performance should be improved
 
 ## Hardware Limitations
 ### Dolphin-Emu
