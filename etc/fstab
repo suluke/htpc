@@ -1,0 +1,8 @@
+# 
+# /etc/fstab: static file system information
+#
+# <file system>	<dir>	<type>	<options>	<dump>	<pass>
+# UUID=b031fe3d-ee9b-4ab9-9399-9d7c85d03f8b
+/dev/sda1           	/         	ext4      	rw,relatime,data=ordered	0 1
+/dev/md0		/mnt/nas	ext4		defaults			0 2
+/mnt/nas		/srv/nfs/nas	none		bind				0 0

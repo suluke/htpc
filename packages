@@ -1,0 +1,32 @@
+# Pacman
+alsa-utils
+exfat-utils
+hd-idle
+hdparm
+kodi
+lm_sensors
+libdvd
+libdvdcss
+libdvdnav
+libretro-mupen64plus
+libva-intel-driver
+mdadm
+nfs-utils
+ntp
+ntfs-3g
+openbox
+openssh
+ratpoison
+retroarch
+sudo
+udisks
+udisks2
+xf86-video-intel
+
+
+# AUR
+google-chrome
+kodi-standalone-service
+steam
+xboxdrv
+kodi-addon-superrepo-all // Decide for youself if you want to install from AUR or via Kodi
