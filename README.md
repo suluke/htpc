@@ -30,6 +30,28 @@ But after you have one up and running on your HTPC, you might want to take a loo
 It contains a list of packages that can help you get the best out of your htpc.
 The following sections deal with each of the problems/goals I had when setting up my box and how I solved/achieved them.
 
+### WiFi
+The Dodocool usb dongle was advertised with having Linux support.
+Therefore I expected it to "just work" when plugged in.
+Of course, this isn't the case, since the mainline kernel does not (yet?) support this dongle out of the box.
+But still, I was positively surprised that the included CD had a folder containing a Linux driver.
+Of course I didn't want to make use of the binary blob in there, but the added PDF files at least told me that the dongle's chipset is Mediatek's mt7610u.
+If you search on google, you will find several github repositories containing an open source driver for this chipset.
+As an experienced arch user, one naturally looks for a pre-packaged version of it in the AUR.
+There I went with the package [`mt7610u_sta-dkms-git`](https://aur.archlinux.org/packages/mt7610u_sta-dkms-git/), since dkms is the way to go for external drivers.
+
+Now the dongle was detected and I could concentrate on setting it up.
+I found that I had the `netctl` package already installed as part of the `base` package group, so I went with it.
+The setup process is simply:
+* Add a config file to `/etc/netctl` or copy one from `/etc/netctl/examples` that matches your intended configuration
+* Execute `sudo netctl start <your config filename>`
+* Execute `sudo netctl enable <your config filename>` to run it on boot
+This of course is a very simple setup which only handles one single connection.
+But since the htpc is stationary anyways, that's just enough.
+You can have a look at [`/etc/netctl/ra0`](etc/netct/ra0) to see my config file.
+`ra0` was the name assigned to my dongle.
+I also assigned a static IP to the HTPC as can be seen from the config file.
+
 ### Sound
 Personally, I do not need sound outputs any other than the one over HDMI to my TV.
 That's why I can live without Pulseaudio and its excellent support for multiple sinks.

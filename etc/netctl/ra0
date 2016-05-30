@@ -1,0 +1,19 @@
+Description='TVBox standard wifi connection'
+Interface=ra0
+Connection=wireless
+
+Security=wpa
+#IP=dhcp
+IP=static
+Address='192.168.0.101/24'
+Gateway=('192.168.0.1')
+DNS=('192.168.0.1')
+
+ESSID='<Your SSID>'
+# You might want to put the hexadecimal version of your key here for "security by obscurity" reasons.
+# See the wiki for details
+Key='<Your passphrase>'
+# Uncomment this if your ssid is hidden
+Hidden=yes
+# Set a priority for automatic profile selection
+#Priority=10
